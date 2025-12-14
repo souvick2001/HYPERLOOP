@@ -1,3 +1,5 @@
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
@@ -41,3 +43,9 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+=======
+node_modules
+>>>>>>> Stashed changes
+=======
+node_modules
+>>>>>>> Stashed changes
