@@ -1,0 +1,61 @@
+<nav>
+  <div class="logo">
+    <img src="hyperlogo.png" alt="Hyperloop Logo" class="logo-icon">
+    <span>HYPERLOOP</span>
+  </div>
+  <ul class="nav-links">
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+    <li><a routerLink="/product" routerLinkActive="active">Product</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="search-box">
+      <span>🔍</span>
+      <input type="text" placeholder="Type here" [(ngModel)]="searchQuery">
+    </div>
+    <div class="user-icon" (click)="onUserIconClick()">👤</div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span class="main-text">Smarter Forecasts</span>
+      <span class="sub-text">Better Buys</span>
+    </h1>
+    <p class="hero-subtitle">SUPPORT LOCAL EVERYTHING</p>
+    
+    <div class="quantity-selector">
+      <div class="quantity-label">Choose your</div>
+      <div class="quantity-controls">
+        <button class="quantity-btn" (click)="decreaseQty()">−</button>
+        <span class="quantity-display">{{ quantity }}</span>
+        <button class="quantity-btn" (click)="increaseQty()">+</button>
+      </div>
+    </div>
+
+    <button class="buy-btn" (click)="onBuyNow()">
+      <span>🛒</span>
+      <span>Buy Now</span>
+    </button>
+  </div>
+
+  <div class="hero-right">
+    <div class="main-circle">
+      <div class="chair-image">🪑</div>
+      <div class="feature-badge badge-minimalistic">Minimalistic</div>
+      <div class="feature-badge badge-cozy">Super cozy</div>
+    </div>
+    <div class="side-images">
+      <div class="side-image side-image-1" (click)="onSideImageClick(1)">🛵</div>
+      <div class="side-image side-image-2" (click)="onSideImageClick(2)">🎨</div>
+      <div class="side-image side-image-3" (click)="onSideImageClick(3)">📦</div>
+    </div>
+  </div>
+
+  <div class="continue-shopping" (click)="onContinueShopping()">
+    <span>Continue shopping</span>
+    <span class="arrow">→</span>
+  </div>
+</section>
